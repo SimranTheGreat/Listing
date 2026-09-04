@@ -13,7 +13,6 @@ class GoogleLoginRequest(BaseModel):
 
 @router.post("/google")
 def google_login(data: GoogleLoginRequest):
-
     try:
         user = verify_google_token(data.token)
 
@@ -39,10 +38,9 @@ def google_login(data: GoogleLoginRequest):
                 .table("userId")
                 .insert({
                     "googleId": google_id,
-                    "name": name,
+                    "userName": name,
                     "email": email,
-                    "usePhoto": picture,
-                    "admin": False
+                    "userPic": picture
                 })
                 .execute()
             )
