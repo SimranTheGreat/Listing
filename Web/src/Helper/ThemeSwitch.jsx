@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useThemeStore } from "../store";
+import { useThemeStore } from "../Store";
 export default function ThemeSwitch() {
  const { theme, toggleTheme } = useThemeStore();
 

@@ -1,6 +1,8 @@
 import { GoogleLogin } from "@react-oauth/google";
+import {useAuthStore}from "../Store";
 
 export default function Login() {
+  const login = useAuthStore((state) => state.login);
   const handleSuccess = async (credentialResponse) => {
     try {
       const response = await fetch("http://127.0.0.1:8000/auth/google", {
@@ -14,7 +16,7 @@ export default function Login() {
       });
 
       const data = await response.json();
-
+      login(data.user);
       console.log(data);
     } catch (error) {
       console.error(error);
