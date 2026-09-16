@@ -38,8 +38,8 @@ const useAuthStore = create(
     }),
     {
       name: "auth-storage",
-    }
-  )
+    },
+  ),
 );
 
 export default useAuthStore;

@@ -6,7 +6,7 @@ import { ThemeSwitch } from "../Helper";
 export default function MainHeader() {
   const isLoggedIn = useAuthStore((state) => state.isLoggedIn);
   const userName = useAuthStore((state) => state.userName);
- 
+
   return (
     <header
       className="
@@ -23,18 +23,16 @@ export default function MainHeader() {
         transition-colors duration-300
       "
     >
-  
       <div className="w-100 h-12 overflow-hidden flex items-center">
- <img
-  src={Logo}
-  alt="List & Found"
-  className="h-12 w-60 object-contain"
-/>
-</div>
+        <img
+          src={Logo}
+          alt="List & Found"
+          className="h-12 w-60 object-contain"
+        />
+      </div>
 
       {/* Right */}
       <div className="relative z-10 flex items-center gap-3">
-
         <button
           className="
             p-2.5 rounded-full

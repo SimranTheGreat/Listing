@@ -1,5 +1,5 @@
 import { GoogleLogin } from "@react-oauth/google";
-import {useAuthStore}from "../Store";
+import { useAuthStore } from "../Store";
 
 export default function Login() {
   const login = useAuthStore((state) => state.login);
